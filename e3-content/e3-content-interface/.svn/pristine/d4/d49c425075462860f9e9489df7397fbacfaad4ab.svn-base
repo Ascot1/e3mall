@@ -1,0 +1,32 @@
+package cn.e3mall.content.service;
+
+import java.util.List;
+
+import cn.e3mall.common.pojo.EasyUIDataGridResult;
+import cn.e3mall.common.utils.E3Result;
+import cn.e3mall.pojo.TbContent;
+
+/**
+ * 操作分类内容接口
+ * @author cldn1
+ *
+ */
+public interface OperaterCatService {
+
+	//添加新节点
+	public E3Result addCatNode(long parentId,String name);
+	
+	//新增內容保存
+	public E3Result addContent(TbContent content);
+	
+	//根据cid显示内容列表
+	public EasyUIDataGridResult findContentByCid(long categoryId,int page,int rows);
+	
+	//根据所选id编辑内容
+	public E3Result editContent(TbContent content);
+	
+	//根据cid获取内容
+	public List<TbContent> getContentListByCid(long cid);
+	
+	
+}
